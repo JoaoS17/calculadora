@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - João Pedro do Nascimento Faria</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    Número 1:<br />
+    <input id="n1" type="number" /><br />
+    Número 2:<br />
+    <input id="n2" type="number"/><br /><br />
+    <button onclick="somar()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="multiplicar()">*</button>
+    <button onclick="dividir()">/</button>
+    <br /><br />
+    <h2>Resultado:</h2> <span></span>
+
+    <script> 
+        var n1 = document.querySelector('#n1')
+        var n2 = document.querySelector('#n2')
+        var resultado = document.querySelector('span')
+
+        function somar() {
+            resultado.innerHTML = parseFloat(n1.value) + parseFloat(n2.value)
+        }
+
+        function subtrair() {
+            resultado.innerHTML = parseFloat(n1.value)  - parseFloat(n2.value)
+        }
+
+        function multiplicar() {
+            resultado.innerHTML = parseFloat(n1.value) * parseFloat(n2.value)
+        }
+
+        function dividir() {
+            resultado.innerHTML = parseFloat(n1.value) / parseFloat(n2.value)
+        }
+    </script>
+</body>
+</html>
